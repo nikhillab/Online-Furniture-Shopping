@@ -1,0 +1,76 @@
+database name=home
+use home
+show tables{
+
+table 1:register
+	2:prodduct
+	3:cart
+}	
+
+================================================================================================
+
+CREATE TABLE table_name (
+    column1 datatype,
+    column2 datatype,
+    column3 datatype,
+   ....
+);
+
+=================================================================================================
+
+ 
+ describe  product;
++-----------+---------------+------+-----+---------+-------+
+| Field     | Type          | Null | Key | Default | Extra |
++-----------+---------------+------+-----+---------+-------+
+| type      | varchar(20)   | YES  |     | NULL    |       |
+| brand     | varchar(20)   | YES  |     | NULL    |       |
+| price     | varchar(20)   | NO   |     | NULL    |       |
+| dimension | varchar(20)   | YES  |     | NULL    |       |
+| weight    | varchar(20)   | YES  |     | NULL    |       |
+| colour    | varchar(10)   | YES  |     | NULL    |       |
+| pid       | int(11)       | YES  |     | NULL    |       |
+| img       | varchar(1000) | YES  |     | NULL    |       |
++-----------+---------------+------+-----+---------+-------+
+=======================================================================================
+
+mysql> select * from register;
++-----------+----------+------------------+----------+------------+--------+
+| Firstname | Lastname | Email            | Password | Contact    | Gender |
++-----------+----------+------------------+----------+------------+--------+
+| Nikhil    | Kumar    | nikhil@gmail.com | 1234     | 1234567890 | Male   |
++-----------+----------+------------------+----------+------------+--------+
+===================================================================================================
+
+DELETE FROM table_name WHERE condition;
+
+==================================================================
+
+ALTER TABLE table_name
+ADD column_name datatype;
+
+Example
+ALTER TABLE Customers
+ADD Email varchar(255);
+
+======================================================
+
+ALTER TABLE table_name
+DROP COLUMN column_name; 
+
+
+
+The following SQL deletes the "Email" column from the "Customers" table:
+Example
+ALTER TABLE Customers
+DROP COLUMN Email;
+====================================================================================
+Syntax
+
+DROP TABLE table_name; 
+
+Note: Be careful before dropping a table. Deleting a table will result in loss of complete information stored in the table!
+
+
+
+
